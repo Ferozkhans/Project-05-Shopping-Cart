@@ -8,10 +8,7 @@ const { isValid,
     validString
 } = require("../validators/validator")
 const currencySymbol = require("currency-symbol-map")
-<<<<<<< HEAD
 
-=======
->>>>>>> 2d2083a752b66a7e85bca579653ea042695e437f
 
 
 //**********************************create product Function********************************************

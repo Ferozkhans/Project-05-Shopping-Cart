@@ -4,9 +4,7 @@ const cartModel = require("../models/cartModel")
 const orderModel = require("../models/orderModel")
 const { isValid,
     isValidRequestBody,
-    isValidObjectId,
-    
-     } = require("../validators/validator")
+    isValidObjectId } = require("../validators/validator")
 
     const createOrder = async (req, res) => {
       try {
@@ -46,7 +44,7 @@ const { isValid,
         
   //checking if status is present in request body
         if(data.status) {
-          if(!isValid(data.status)) return res.status(400).send({ status: false, message: "Enter a valid value for is order status" });
+          if(!isValid(data.status)) return res.status(400).send({ status: false, message: "Enter a valid value for  order status" });
     
            //validating if status is in valid format
           if(!(['Pending','Completed','Cancelled'].includes(data.status))) return res.status(400).send({ status: false, message: "Order status should be one of this 'Pending','Completed' and 'Cancelled'" });
